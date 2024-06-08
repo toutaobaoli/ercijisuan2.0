@@ -4,32 +4,48 @@
   <meta charset="utf-8" name="view#ff00a9port" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>二次方程求解小工具2.0(根号版)</title>
   <style>
-div.guo1{ text-align:center; ; height:100;background-color:lightgreen;
- padding:50px; font-size:40px;opacity=0.1
-
+  #shu{ margin-top:50px; 
+    }
+#num1{ width:100;height:50;
+}
+#num2{width:100;height:50;
 
 }
-div.guo2{ text-align:center; background-color:lightblue; height:100;
-padding:50px;font-size: 40px;
+#num3{width:100;height:50;
+}
+#dian{width:100;height:50;
+}
+#dian2{width:100;height:50;
+}
+#jie{ text-align:center;  margin-top:50px;
+  }
+#jie2{ text-align:center;margin-top:50px;
+}
+#jie3{text-align:center; margin-top:50px;
+}
+#jie4{text-align:center; margin-top: 50px;
 }
 div.sheng{ text-align:center; height:30; font-family:arial; color:red;
 margin-top:500px ; padding:30px; font-size:40px;
 }
 </style>
- 
-  
-  
-  <div id="jie" class="guo1">
-  
-  
-  
-  </div>
-  
-  <div id="jie2" class="guo2" >
-
+ <div style="text-align:center">
+点击下方白色方框输入
 </div>
-  
-  
+
+<div id="shu">
+  <input type="text" id="num1" value="">二次根系数，俗称"a"
+ <input type="text" id="num2" value="">一次根系数，俗称"b"
+ <input type="text" id="num3" value="">常量，俗称"c"
+  <button id="dian" style="button"  onclick="get()" >计算.有根</button>
+  <button id="dian2"  style="button" onclick="gete()">计算.无根</button>
+  </div>
+  <div id="jie">
+</div>
+<div id="jie2">
+</div>
+<div id="jie3"></div>
+<div id="jie4"></div>
   <div class="sheng">
   
   本网站只用于平时学习&emsp;&emsp;&emsp;&emsp;&emsp;作者:投桃报李
@@ -39,9 +55,13 @@ margin-top:500px ; padding:30px; font-size:40px;
   
   
   <script>
-var A=prompt("二次根系数");
-	B=prompt("一次根系数");
-	C=prompt("常量");
+
+
+function get(){
+
+var A=document.getElementById("num1").value;
+	B=document.getElementById("num2").value;
+	C=document.getElementById("num3").value;
     D=B*B
     E=4*A*C
     F=D-E
@@ -60,6 +80,7 @@ var A=prompt("二次根系数");
   g=""
   h=""
   j="无解，请核对方程是否有解后，点刷新重新输入"
+
   
   
  if(W==0){ g=J
@@ -92,13 +113,38 @@ else{ h=Z
 
 }
 
+document.getElementById("jie").innerHTML="第一个解→:"+g
+document.getElementById("jie2").innerHTML="第二个解→："+h
 
-	document.getElementById("jie").innerHTML="第一个解:"+g
-
-    document.getElementById("jie2").innerHTML="第二个解:"+h
-   
     
- 
+   }
+    
+ function gete(){  
+ var A=document.getElementById("num1").value;
+	B=document.getElementById("num2").value;
+	C=document.getElementById("num3").value;
+    D=B*B
+    E=4*A*C
+    F=D-E
+    G=Math.sqrt(F)
+    H=G-B
+    I=2*A
+    J=H/I
+   //第二个解
+   U=-B-G
+   V=U/I
+  //判断是否为整数
+  W=J%1
+   X=V%1
+   Y=I+"分之"+"根号"+F+",减"+(-B)
+   Z=I+"分之"+(-B)+"减,根号"+F
+  g=""
+  h=""
+  j="无解，请核对方程是否有解后，点刷新重新输入"
+
+document.getElementById("jie3").innerHTML="无根第一个解→:"+J
+document.getElementById("jie4").innerHTML="无根第二个解→："+V
+ }
     
     
 
