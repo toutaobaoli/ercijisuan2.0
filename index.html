@@ -1,0 +1,89 @@
+<html>
+ <head></head>
+ <body style="background-image :url(https://s21.ax1x.com/2024/06/08/pktWRPO.jpg);">
+  <meta charset="utf-8" name="view#ff00a9port" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>二次方程求解小工具2.0(根号版)</title>
+  <style>
+div.guo1{ text-align:center; background-color:red; height:100;
+ padding:50px; font-size:40px;
+
+
+}
+div.guo2{ text-align:center; background-color:blue; height:100;
+padding:50px;font-size: 40px;
+}
+div.sheng{ text-align:center; background-color:gray; height:30;
+margin-top:500px ; padding:30px;
+}
+</style>
+ 
+  
+  
+  <div id="jie" class="guo1">
+  
+  
+  
+  </div>
+  
+  <div id="jie2" class="guo2" >
+
+</div>
+  
+  
+  <div class="sheng">
+  
+  本网站只用于平时学习&emsp;&emsp;&emsp;&emsp;&emsp;作者:投桃报李
+
+</div>
+  
+  
+  
+  <script>
+var A=prompt("二次根系数");
+	B=prompt("一次根系数");
+	C=prompt("常量");
+    D=B*B
+    E=4*A*C
+    F=D-E
+    G=Math.sqrt(F)
+    H=G-B
+    I=2*A
+    J=H/I
+   //第二个解
+   U=-B-G
+   V=U/I
+  //判断是否为整数
+  W=J%1
+   X=V%1
+   Y=I+"分之"+"根号"+F+",减"+(-B)
+   Z=I+"分之"+(-B)+"减,根号"+F
+  g=""
+  h=""
+ if(W==0){ g=J
+ 
+ }
+else{ g=Y
+
+}
+if(X==0){ h=V
+
+}
+
+else{ h=Z
+
+}
+
+
+	document.getElementById("jie").innerHTML="第一个解:"+g
+
+    document.getElementById("jie2").innerHTML="第二个解:"+h
+   
+    
+ 
+    
+    
+
+
+</script>
+ </body>
+</html>
