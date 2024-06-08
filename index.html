@@ -4,8 +4,8 @@
   <meta charset="utf-8" name="view#ff00a9port" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>二次方程求解小工具2.0(根号版)</title>
   <style>
-div.guo1{ text-align:center; background-color:lightgreen; height:100;
- padding:50px; font-size:40px;
+div.guo1{ text-align:center; ; height:100;background-color:lightgreen;
+ padding:50px; font-size:40px;opacity=0.1
 
 
 }
@@ -59,13 +59,26 @@ var A=prompt("二次根系数");
    Z=I+"分之"+(-B)+"减,根号"+F
   g=""
   h=""
+  j="无解，请核对方程是否有解后，点刷新重新输入"
+  
+  
  if(W==0){ g=J
  
  }
+else if(F<0){  g=j
+
+}
+
+
 else{ g=Y
 
 }
+
 if(X==0){ h=V
+
+}
+
+else if(F<0){ h=j
 
 }
 
